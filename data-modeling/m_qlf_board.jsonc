@@ -1,0 +1,12 @@
+[
+    {
+        "_id": 1,
+        "name": "CBSE",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    }
+]

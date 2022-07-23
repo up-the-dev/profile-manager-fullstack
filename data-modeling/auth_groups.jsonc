@@ -1,0 +1,16 @@
+[
+    {   
+        "name": "admin",
+        "description": "Administrator",
+        "permissions": [
+            "*"
+        ]
+    },
+    {
+        "name": "user",
+        "description": "User",
+        "permissions": [
+            "*"
+        ]
+    }
+]

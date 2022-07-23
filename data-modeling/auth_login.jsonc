@@ -1,0 +1,15 @@
+{
+    //GUID - Golbal ID for the user
+    "_id": "user001",
+    "login": "admin",
+    "salt": "aio89076",
+    "hash": "tyuuuihhgh678897hghh",
+    "email": "umeshp@gmail.com",
+    "firstName": "Umesh", // Delete if required
+    "lastName": "Patel", // Delete if required
+    "mobileNo": "9689416033", // Delete if required
+    "groups": [
+        "admin",
+        "user"
+    ]
+}

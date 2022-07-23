@@ -1,0 +1,42 @@
+[
+    {
+        "_id": 1,
+        "name": "Aadhar Card",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    },
+    {
+        "_id": 2,
+        "name": "Voter Card",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    },
+    {
+        "_id": 3,
+        "name": "PAN Card",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    },
+    {
+        "_id": 4,
+        "name": "Passport",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    }
+]
