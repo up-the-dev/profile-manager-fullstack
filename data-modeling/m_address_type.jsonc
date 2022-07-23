@@ -1,0 +1,52 @@
+[
+    {
+        "_id": 1,
+        "name": "Home",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    },
+    {
+        "_id": 2,
+        "name": "Work",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    },
+    {
+        "_id": 3,
+        "name": "Correspondence",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    },
+    {
+        "_id": 4,
+        "name": "Permenent",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    },
+    {
+        "_id": 5,
+        "name": "Other",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    }
+]

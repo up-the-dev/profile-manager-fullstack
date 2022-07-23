@@ -1,0 +1,13 @@
+[
+    {
+        "_id": 1,
+        "stateId": 1,
+        "name": "Pune",
+        "createdBy": "user001",
+        "createdDate": 123456765768,
+        "lastModifiedBy": "user001",
+        "lastModifiedDate": 123456765768,
+        "isActive": true,
+        "isDeleted": false
+    }
+]

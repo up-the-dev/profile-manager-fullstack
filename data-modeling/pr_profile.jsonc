@@ -1,0 +1,155 @@
+{
+    "profileId": "2dddd3ea-fafd-40a3-8c64-df65f9e3c7ac",
+    "userId": "user001",
+    "login": "admin",
+    "basicProfile": {
+        "firstName": "Umesh",
+        "lastName": "Patel",
+        "fullName": "Umesh Patel",
+        "gender": "Male", // Male / Female / Transgender
+        "dateOfBirth": {
+            "value": "21/05/2002",
+            "day": 21,
+            "month": 5,
+            "year": 2021
+        },
+        "marritalStatus": {}
+        //More fields to be added     
+    },
+    "adrressInfo": [
+        {
+            "addressType": {
+                "id": 1,
+                "name": "Home"
+            },
+            "addressLine1": "Tilak Nager",
+            "addressLine2": "Yashwantrao Chavan Marg",
+            "addressLine3": "Ring Road",
+            "landmark": "Near Kalyan Vihar",
+            "country": {
+                "_id": 19,
+                "name": "INDIA",
+                "code": "IN",
+                "nationality": "Indian",
+                "personCall": "an Indian"
+            },
+            "state": {
+                "_id": 1,
+                "countryId": 19,
+                "name": "Maharshtra",
+                "code": "MH"
+            },
+            "district": {
+                "_id": 1,
+                "stateId": 1,
+                "countryId": 19,
+                "name": "Pune"
+            },
+            "tehsil": {
+                "_id": 1,
+                "districId": 1,
+                "stateId": 1,
+                "countryId": 19,
+                "name": "Pune"
+            },
+            "city": "Jogaiwadi",
+            "pincode": "411045"
+            //More fields to be added
+        }
+    ],
+    "contactInfo": [
+        {
+            "contactType": {
+                "_id": 1,
+                "name": "Mobile"
+            },
+            "contactNumber": "9689416033",
+            "countryCode": "91",
+            "isPrimary": true,
+            "isEmmergency": true
+        }
+    ],
+    "electronicContactInfo": [
+        {
+            "electronicType": "email",
+            "electronicValue": "umeshp@gmail.com",
+            "isPrimary": true
+        }
+    ],
+    "identityInfo": [
+        {
+            "identityType": {
+                "_id": 1,
+                "name": "Aadhar Card"
+            },
+            "identityNumber": "123456789012345",
+            "dateOfIssue": 1234536574,
+            "expiryDate": 1657958371,
+            "url": "https://www.google.com/images/umeshp/aadhar.pdf"
+        }
+    ],
+    "qualifications": [
+        {
+            "board": {
+                "_id": 1,
+                "name": "CBSE"
+            },
+            "University": {
+                "_id": 1,
+                "name": "University of Mumbai"
+            },
+            "qualificationLevel": {
+                "_id": 1,
+                "name": "Graduate"
+            },
+            "qualificationType": {
+                "_id": 1,
+                "name": "B.Tech"
+            },
+            "institution": "KKIT institution",
+            "examSeatNumber": "KKIT-123",
+            "yearOfPassing": 2022,
+            "marksObtained": 190,
+            "totalMarks": 160,
+            "percentage": 78,
+            "isCurrent": true,
+            "url": "https://www.google.com/images/umeshp/aadhar.pdf"
+        }
+    ],
+    "socailReservation": [
+        {
+            "catgeory": {
+                "_id": 1,
+                "name": "General"
+            },
+            "subCatgeory": {
+                "_id": 1,
+                "name": "Hindu"
+            },
+            "cast": {
+                "_id": 1,
+                "name": "Maratha"
+            }
+        }
+    ],
+    "languages": [],
+    "skills": [],
+    "interests": [],
+    "medicalProfile": {
+        // bloodGroup 
+        //height
+        //weight
+        //isDisabled
+        //disabilityInfo :[{
+        //typeOfDisability
+        //percentageOfDisability
+        // }]      
+    },
+    "workExperience": [],
+    "createdBy": "user001",
+    "createdDate": 123456765768,
+    "lastModifiedBy": "user001",
+    "lastModifiedDate": 123456765768,
+    "isActive": true,
+    "isDeleted": false
+}
