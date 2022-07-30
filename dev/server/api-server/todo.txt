@@ -1,0 +1,14 @@
+[+] /o/auth/reg
+[+] /o/auth/login
+-------------------------------------------------------
+[] /r/profile/basicprofile/:profileId       get
+[] /r/profile/basicprofile                 post  new   
+[] /r/profile/basicprofile/:profileId      post  update
+
+[] /r/profile/identity                 get
+[] /r/profile/identity                 post  new
+[] /r/profile/identity/:profileId      post  update
+
+[] /r/profile/adrress                 get
+[] /r/profile/adrress                 post  new
+[] /r/profile/addresss/:profileId     post  update
