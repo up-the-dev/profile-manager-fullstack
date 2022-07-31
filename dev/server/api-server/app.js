@@ -1,9 +1,9 @@
 import express from 'express'
-import { Server } from 'http'
 import { APP_PORT, DB_URL } from './config'
 import mongoose from 'mongoose'
-import exp from 'constants'
-const mainRouter = require('./router')
+import auth from './middlewares/auth'
+const restrictedRoute = require('./routes/restrictedRoutes')
+const openRoute = require('./routes/openRoutes')
 import errorHandler from './middlewares/errorHandler'
 
 const app = express()
@@ -25,7 +25,9 @@ async function dbConnection() {
 dbConnection()
 
 app.use(express.json())
-app.use('/api', mainRouter)
+app.use('/api', openRoute)
+app.use('/api', auth, restrictedRoute)
+
 
 
 
