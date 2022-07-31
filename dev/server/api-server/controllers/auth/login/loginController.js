@@ -20,6 +20,7 @@ const loginController = {
         } catch (err) {
             return next(err)
         }
+
         res.header(200).json({ access_token })
     }
 }
