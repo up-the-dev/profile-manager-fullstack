@@ -1,12 +1,11 @@
-import { defaults } from "joi"
 import { CustomErrorHandler, JwtService } from "../services"
 
 const auth = async (req, res, next) => {
-    const header = req.headers.authorization
-    if (!header) {
+    const authheader = req.headers.authorization
+    if (!authheader) {
         return next(CustomErrorHandler.unAuthorized())
     }
-    const token = header.split(' ')[1]
+    const token = authheader.split(' ')[1]
     try {
         const { _id, role } = await JwtService.verify(token)
         const user = {
