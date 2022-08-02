@@ -1,5 +1,6 @@
 import bcrypt from 'bcrypt'
-import { User } from "../../../models"
+import { REFRESH_SECRET } from '../../../config'
+import { User, RefreshTokenModel } from "../../../models"
 import { CustomErrorHandler, JwtService } from '../../../services'
 import registrationService from "./registrationService"
 
@@ -22,13 +23,16 @@ const registerController = {
             password: hashedPassword
         })
         let access_token
+        let refresh_token
         try {
             let result = await user.save();
             access_token = JwtService.sign({ _id: result._id, email: result.email, role: result.role })
+            refresh_token = JwtService.sign({ _id: result._id, email: result.email, role: result.role }, REFRESH_SECRET, '1y')
+            await RefreshTokenModel.create({ token: refresh_token })
         } catch (err) {
             return next(err)
         }
-        res.header(200).json({ access_token })
+        res.header(200).json({ access_token, refresh_token })
     }
 }
 

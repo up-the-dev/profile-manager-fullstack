@@ -25,8 +25,8 @@ async function dbConnection() {
 dbConnection()
 
 app.use(express.json())
-app.use('/api', openRoute)
-app.use('/api', auth, restrictedRoute)
+app.use('/o', openRoute)
+app.use('/r', auth, restrictedRoute)
 
 
 
