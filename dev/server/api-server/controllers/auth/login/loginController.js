@@ -6,7 +6,7 @@ import { REFRESH_SECRET } from '../../../config'
 
 const loginController = {
     async login(req, res, next) {
-        loginService.Validation(req, res, next)
+        loginService.loginValidation(req, res, next)
         let access_token
         let refresh_token
         try {
@@ -27,6 +27,16 @@ const loginController = {
         }
 
         res.header(200).json({ access_token, refresh_token })
+    },
+
+    async logout(req, res, next) {
+        loginService.logoutValidation(req, res, next)
+        try {
+            await RefreshTokenModel.deleteOne({ token: req.body.refresh_token })
+        } catch (err) {
+            return next(new Error("Internal Database Error"))
+        }
+        res.send({ status: 1 })
     }
 }
 export default loginController
