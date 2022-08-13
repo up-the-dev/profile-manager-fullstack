@@ -1,10 +1,11 @@
 import Joi from "joi"
+import { ObjectId } from "mongodb"
 import { REFRESH_SECRET } from "../../config"
-import { RefreshTokenModel, User } from "../../models"
 import { CustomErrorHandler, JwtService } from "../../services"
-
+const dbs = require('../../db/dbConnection')
 const refreshTokenController = {
     async refresh(req, res, next) {
+
         const tokenSchema = Joi.object({
             refresh_token: Joi.string().required()
         })
@@ -14,8 +15,10 @@ const refreshTokenController = {
         }
         let access_token
         let refresh_token
+        let db
         try {
-            const refreshToken = await RefreshTokenModel.findOne({ token: req.body.refresh_token })
+            db = dbs.getDB()
+            const refreshToken = await db.collection('refreshTokens').findOne({ token: req.body.refresh_token })
             if (!refreshToken) {
                 return next(CustomErrorHandler.unAuthorized("refresh token not found"))
             }
@@ -23,17 +26,18 @@ const refreshTokenController = {
             try {
                 const { _id } = await JwtService.verify(refreshToken.token, REFRESH_SECRET)
                 userId = _id
-
+                console.log(userId)
             } catch (err) {
                 return next(CustomErrorHandler.unAuthorized('invalid refresh token'))
             }
-            const user = await User.exists({ _id: userId })
+
+            const user = await db.collection('users').findOne({ _id: new ObjectId(userId) })
             if (!user) {
                 return next(CustomErrorHandler.notFound("user not found"))
             }
-            access_token = await JwtService.sign({ _id: user._id, email: user.email, role: user.role })
-            refresh_token = await JwtService.sign({ _id: user._id, email: user.email, role: user.role }, REFRESH_SECRET, '1y')
-            await RefreshTokenModel.create({ token: refresh_token })
+            access_token = await JwtService.sign({ _id: user._id, role: user.role })
+            refresh_token = await JwtService.sign({ _id: user._id, role: user.role }, REFRESH_SECRET, '1y')
+            await db.collection('refreshTokens').insertOne({ token: refresh_token })
         } catch (err) {
             return next(err)
         }
