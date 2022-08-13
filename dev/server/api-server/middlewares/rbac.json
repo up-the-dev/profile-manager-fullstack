@@ -1,0 +1,10 @@
+[
+    {
+        "url": "/c/profile/getdata",
+        "roles": [
+            "admin",
+            "superAdmin",
+            ""
+        ]
+    }
+]

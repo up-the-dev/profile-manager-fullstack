@@ -1,13 +1,18 @@
+[+] connection using MongoClient 
+
 [+] /o/auth/reg
 [+] /o/auth/login
--------------------------------------------------------
-[] /r/profile/basicprofile/:profileId      get
-[] /r/profile/basicprofile/:profileId       post  update
 
-[] /r/profile/identity                      get
-[] /r/profile/identity                      post  new
-[] /r/profile/identity/:profileId           post  update
+[] rbac implementation
 
-[] /r/profile/adrress                       get
-[] /r/profile/adrress                       post  new
-[] /r/profile/addresss/:profileId           post  update
+[+] /r/profile/addrress                       post  new/update
+[+] /r/profile/addresss                        get    selfAddress
+[+] /r/profile/addrress/:profileId             get     with Id
+
+[] /r/profile/basicprofile                   post  update
+[+] /r/profile/basicprofile                   get   selfprofile
+[+] /r/profile/basicprofile/:profileId        get   with id
+
+[] /r/profile/identity                       get
+[] /r/profile/identity                       post  new
+[] /r/profile/identity/:profileId            post  update
