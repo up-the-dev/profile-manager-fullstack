@@ -9,7 +9,7 @@ const profileController = {
             db = dbs.getDB()
             user = await db.collection('users').findOne({ _id: new ObjectID(req.user._id) })
             if (!user) {
-                return next(CustomErrorHandler.notFound())
+                return next(CustomErrorHandler.unAuthorized())
             }
         } catch (err) {
             return next(err)
