@@ -11,7 +11,6 @@ const registerController = {
         try {
             db = dbs.getDB()
             const exist = await db.collection('users').findOne({ email: req.body.email })
-            console.log(exist)
             if (exist) {
                 return next(CustomErrorHandler.alreadyExist("Email already exist."));
             }
