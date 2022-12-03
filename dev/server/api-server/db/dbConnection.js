@@ -15,7 +15,6 @@ module.exports = {
                 }
                 dbConnection = dbc.db('profiles')
                 console.log("DB CONNECTED")
-
                 return next()
             })
         } catch (err) {

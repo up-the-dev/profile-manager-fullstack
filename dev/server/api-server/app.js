@@ -19,9 +19,8 @@ dbConnection.connection((err) => {
     if (err) {
         console.log(err)
         process.exit()
-
     }
-})
-app.listen(APP_PORT, () => {
-    console.log(`server started at ${APP_PORT}`)
+    app.listen(APP_PORT, () => {
+        console.log(`server started at ${APP_PORT}`)
+    })
 })
